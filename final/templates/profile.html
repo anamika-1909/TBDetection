@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+
+<h1 class="title">
+  Welcome, {{ name }}
+</h1>
+<p >Upload your xray for TB Detection</p>
+<!-- <a href="localhost:5000/">Click here to know more about TB</a> -->
+ <p><a href="{{ url_for('main.abouttb') }}">Click here</a> to know more about TB</p>
+<br><br>
+<section>
+<h1><b>My Profile</b></h1>
+
+<h3 style="font-size:1rem;">
+<!-- Name: {{ firstname }} {{ lastname }} <br>
+Age: {{ age }}<br>
+Weight: {{ weight }}<br>
+Blood Pressure:  {{ bp }}<br>
+Blood Sugar Levels: {{ bs }}<br>
+Cough in weeks: {{ cough }}<br>
+TB History: {{ pasttb }} <br> -->
+
+<center>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>{{ firstname }} {{ lastname }}</td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>{{ age }}</td>
+  </tr>
+  <tr>
+    <td>Weight</td>
+    <td>{{ weight }} kgs</td>
+  </tr>
+  <tr>
+    <td>Blood Pressure</td>
+    <td>{{ bp }}</td>
+  </tr>
+  <tr>
+    <td>Blood Sugar Levels</td>
+    <td>{{ bs }}</td>
+  </tr>
+  <tr>
+    <td>Cough</td>
+    <td>{{ cough }} weeks</td>
+  </tr>
+  <tr>
+    <td>TB History</td>
+    <td>{{ psdttb }} weeks</td>
+  </tr>
+</table>
+</center>
+</h3>
+</section>
+<br><br>
+<h2><b>Nearest Tuberculosis Treatment Hospital</b> </h2>
+<br>
+<br>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17575.43214177476!2d76.37270352264753!3d30.336980757895915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391028f07518fbcd%3A0xbd45a89a4b85e9ef!2sT.B%20Hospital!5e0!3m2!1sen!2sin!4v1669293729237!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+{% endblock %}
